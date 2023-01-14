@@ -22,7 +22,11 @@ func SumAllTails(numbersToSum ...[]int) []int {
 	sums := make([]int, 0)
 
 	for _, nums := range numbersToSum {
-		sums = append(sums, nums[1:]...)
+		if len(nums) == 0 {
+			sums = append(sums, 0)
+			continue
+		}
+		sums = append(sums, Sum(nums[1:]))
 	}
 
 	return sums
