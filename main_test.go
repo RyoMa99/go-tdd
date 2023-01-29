@@ -23,6 +23,16 @@ func TestConvertToRoman(t *testing.T) {
 			Arabic:      3,
 			Want:        "III",
 		},
+		{
+			"4 gets converted to IV (can't repeat more than 3 times)",
+			4,
+			"IV",
+		},
+		{
+			"5 gets converted to V",
+			5,
+			"V",
+		},
 	}
 
 	for _, tt := range cases {
