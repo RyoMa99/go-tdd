@@ -18,6 +18,11 @@ func TestConvertToRoman(t *testing.T) {
 			Arabic:      2,
 			Want:        "II",
 		},
+		{
+			Description: "3 gets converted to III",
+			Arabic:      3,
+			Want:        "III",
+		},
 	}
 
 	for _, tt := range cases {

@@ -1,12 +1,13 @@
 package main
 
+import "strings"
+
 func ConvertToRoman(arabic int) string {
-	switch arabic {
-	case 1:
-		return "I"
-	case 2:
-		return "II"
-	default:
-		return ""
+	var result strings.Builder
+
+	for i := 0; i < arabic; i++ {
+		result.WriteString("I")
 	}
+
+	return result.String()
 }
